@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <title>Kimchi Diamond – Top-Up Games</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(135deg,#1e1e1e 0%,#111 100%);color:#fff;display:flex;flex-direction:column;min-height:100vh;text-align:center}
+    a{color:#ff0066;text-decoration:none}
+    header{background:#ff0066;padding:20px;display:flex;flex-direction:column;align-items:center;gap:8px}
+    header .logo{height:50px;width:50px;object-fit:cover;border-radius:6px}
+    header h1{font-size:2.2rem;margin:0}
+    header p{font-size:1rem;opacity:.9}
+    /* 2 banners 120×120 + labels below */
+    .banners{display:flex;justify-content:center;gap:15px;margin:20px 0}
+    .banners .banner-card{cursor:pointer;transition:transform .2s;text-align:center}
+    .banners .banner-card:hover{transform:scale(1.05)}
+    .banners img{width:120px;height:120px;border-radius:8px;object-fit:cover}
+    .banners .banner-label{font-size:.9rem;margin-top:6px;opacity:.9}
+    /* Contact block on home */
+    .contact-home{margin:20px 0;font-size:.95rem;line-height:1.6}
+    .contact-home a{margin:0 6px}
+    /* Pages */
+    .page{display:none}
+    .page.active{display:block}
+    .menu{padding:0 20px 40px}
+    .menu h2{margin:20px 0;font-size:1.5rem}
+    .cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+    .card{background:#222;border-radius:12px;width:160px;padding:20px;display:flex;flex-direction:column;align-items:center;box-shadow:0 4px 15px rgba(0,0,0,.4);transition:transform .2s}
+    .card:hover{transform:translateY(-5px)}
+    .card span:first-of-type{font-size:1.4rem;font-weight:700;margin-bottom:8px}
+    .card span:last-of-type{font-size:1rem;margin-bottom:12px;opacity:.9}
+    button{background:#ff0066;border:none;color:#fff;padding:10px 18px;border-radius:6px;cursor:pointer;font-size:1rem;transition:background .2s}
+    button:hover{background:#e0055a}
+    .form-section{display:none;padding:0 20px 40px}
+    .form-section h2{margin-bottom:20px}
+    input{width:260px;margin:8px auto;padding:10px;border:none;border-radius:6px;font-size:1rem}
+    footer{margin-top:auto;padding:20px;font-size:.9rem;opacity:.7}
+  </style>
+</head>
+<body>
+  <!-- HOME PAGE -->
+  <div id="home" class="page active">
+    <header>
+      <img src="photo_2024-01-30_18-12-45-removebg-preview.png" alt="Kimchi Diamond" class="logo">
+      <h1>Kimchi Diamond</h1>
+      <p>ទិញពេជ្រ Mobile Legends & Free Fire </p>
+    </header>
+
+    <!-- 2 banners 120×120 + labels below -->
+    <div class="banners">
+      <div class="banner-card" onclick="showPage('ml')">
+        <img src="unnamed.png" alt="Mobile Legends">
+        <div class="banner-label">Mobile Legends</div>
+      </div>
+      <div class="banner-card" onclick="showPage('ff')">
+        <img src="free-fire-thumbnail.png" alt="Free Fire">
+        <div class="banner-label">Free Fire</div>
+      </div>
+    </div>
+
+    <!-- CONTACT INFO ON HOME -->
+    <div class="contact-home">
+      <strong>ពេលមានបញ្ហាទាក់ទង:</strong><br>
+      <a href="https://www.facebook.com/share/19hZursgN5" target="_blank">Facebook</a> |
+      <a href="tel:0979450831">📞 0979450831</a> |
+      <a href="https://t.me/0979450831" target="_blank">Telegram</a> |
+      <a href="https://wa.me/855979450831" target="_blank">WhatsApp</a>
+    </div>
+
+    <footer>
+      <p><a href="#" onclick="showPage('home')">← ត្រឡប់ទៅទំព័រដើម</a></p>
+    </footer>
+  </div>
+
+  <!-- MOBILE LEGENDS PAGE -->
+  <div id="ml" class="page">
+    <header>
+      <img src="photo_2024-01-30_18-12-45-removebg-preview.png" alt="Kimchi Diamond" class="logo">
+      <h1>Mobile Legends</h1>
+      <p>ទិញពេជ្រ Mobile Legends ឆាប់ ៥-១៥ នាទី</p>
+    </header>
+    <section class="menu">
+      <h2>📋 តារាងតម្លៃ</h2>
+      <div class="cards">
+        <div class="card"><span>5 💎</span><span>$ 0.05</span><button onclick="oML(5,0.05)">ទិញ</button></div>
+        <div class="card"><span>11 💎</span><span>$ 0.11</span><button onclick="oML(11,0.11)">ទិញ</button></div>
+        <div class="card"><span>23 💎</span><span>$ 0.23</span><button onclick="oML(23,0.23)">ទិញ</button></div>
+        <div class="card"><span>50 💎</span><span>$ 0.49</span><button onclick="oML(50,0.49)">ទិញ</button></div>
+        <div class="card"><span>75 💎</span><span>$ 0.73</span><button onclick="oML(75,0.73)">ទិញ</button></div>
+        <div class="card"><span>101 💎</span><span>$ 0.98</span><button onclick="oML(101,0.98)">ទិញ</button></div>
+        <div class="card"><span>150 💎</span><span>$ 1.46</span><button onclick="oML(150,1.46)">ទិញ</button></div>
+        <div class="card"><span>200 💎</span><span>$ 1.95</span><button onclick="oML(200,1.95)">ទិញ</button></div>
+        <div class="card"><span>250 💎</span><span>$ 2.44</span><button onclick="oML(250,2.44)">ទិញ</button></div>
+        <div class="card"><span>300 💎</span><span>$ 2.93</span><button onclick="oML(300,2.93)">ទិញ</button></div>
+        <div class="card"><span>400 💎</span><span>$ 3.90</span><button onclick="oML(400,3.90)">ទិញ</button></div>
+        <div class="card"><span>500 💎</span><span>$ 4.88</span><button onclick="oML(500,4.88)">ទិញ</button></div>
+        <div class="card"><span>700 💎</span><span>$ 6.83</span><button onclick="oML(700,6.83)">ទិញ</button></div>
+        <div class="card"><span>1000 💎</span><span>$ 9.76</span><button onclick="oML(1000,9.76)">ទិញ</button></div>
+        <div class="card"><span>1500 💎</span><span>$ 14.63</span><button onclick="oML(1500,14.63)">ទិញ</button></div>
+        <div class="card"><span>2000 💎</span><span>$ 19.51</span><button onclick="oML(2000,19.51)">ទិញ</button></div>
+        <div class="card"><span>2500 💎</span><span>$ 24.39</span><button onclick="oML(2500,24.39)">ទិញ</button></div>
+        <div class="card"><span>3000 💎</span><span>$ 29.27</span><button onclick="oML(3000,29.27)">ទិញ</button></div>
+        <div class="card"><span>4000 💎</span><span>$ 39.02</span><button onclick="oML(4000,39.02)">ទិញ</button></div>
+        <div class="card"><span>6000 💎</span><span>$ 58.54</span><button onclick="oML(6000,58.54)">ទិញ</button></div>
+        <div class="card"><span>8000 💎</span><span>$ 78.05</span><button onclick="oML(8000,78.05)">ទិញ</button></div>
+        <div class="card"><span>10000 💎</span><span>$ 97.56</span><button onclick="oML(10000,97.56)">ទិញ</button></div>
+      </div>
+    </section>
+    <section class="form-section" id="f-ml">
+      <h2>📤 បញ្ជាទិញ Mobile Legends</h2>
+      <input id="g-ml" placeholder="Game ID">
+      <input id="s-ml" placeholder="Server ID">
+      <input id="r-ml" placeholder="ABA Ref Number">
+      <button onclick="subML()">បញ្ជាទិញឥឡូវ</button>
+    </section>
+    <footer>
+      <p><a href="#" onclick="showPage('home')">← ត្រឡប់ទៅទំព័រដើម</a></p>
+    </footer>
+  </div>
+
+  <!-- FREE FIRE PAGE -->
+  <div id="ff" class="page">
+    <header>
+      <img src="YOUR_KD_LOGO_URL" alt="Kimchi Diamond" class="logo">
+      <h1>Free Fire</h1>
+      <p>ទិញពេជ្រ Free Fire ឆាប់ ៥-១៥ នាទី</p>
+    </header>
+    <section class="menu">
+      <h2>📋 តារាងតម្លៃ</h2>
+      <div class="cards">
+        <div class="card"><span>10 💎</span><span>$ 1.00</span><button onclick="oFF(10,1.00)">ទិញ</button></div>
+        <div class="card"><span>30 💎</span><span>$ 3.00</span><button onclick="oFF(30,3.00)">ទិញ</button></div>
+        <div class="card"><span>70 💎</span><span>$ 7.00</span><button onclick="oFF(70,7.00)">ទិញ</button></div>
+        <div class="card"><span>100 💎</span><span>$ 10.00</span><button onclick="oFF(100,10.00)">ទិញ</button></div>
+        <div class="card"><span>200 💎</span><span>$ 20.00</span><button onclick="oFF(200,20.00)">ទិញ</button></div>
+        <div class="card"><span>290 💎</span><span>$ 29.00</span><button onclick="oFF(290,29.00)">ទិញ</button></div>
+        <div class="card"><span>380 💎</span><span>$ 38.00</span><button onclick="oFF(380,38.00)">ទិញ</button></div>
+        <div class="card"><span>500 💎</span><span>$ 50.00</span><button onclick="oFF(500,50.00)">ទិញ</button></div>
+        <div class="card"><span>700 💎</span><span>$ 70.00</span><button onclick="oFF(700,70.00)">ទិញ</button></div>
+        <div class="card"><span>1000 💎</span><span>$ 100.00</span><button onclick="oFF(1000,100.00)">ទិញ</button></div>
+        <div class="card"><span>2000 💎</span><span>$ 200.00</span><button onclick="oFF(2000,200.00)">ទិញ</button></div>
+        <div class="card"><span>5000 💎</span><span>$ 500.00</span><button onclick="oFF(5000,500.00)">ទិញ</button></div>
+        <div class="card"><span>8000 💎</span><span>$ 800.00</span><button onclick="oFF(8000,800.00)">ទិញ</button></div>
+        <div class="card"><span>12000 💎</span><span>$ 1200.00</span><button onclick="oFF(12000,1200.00)">ទិញ</button></div>
+        <div class="card"><span>20000 💎</span><span>$ 2000.00</span><button onclick="oFF(20000,2000.00)">ទិញ</button></div>
+        <div class="card"><span>50000 💎</span><span>$ 5000.00</span><button onclick="oFF(50000,5000.00)">ទិញ</button></div>
+      </div>
+    </section>
+    <section class="form-section" id="f-ff">
+      <h2>📤 បញ្ជាទិញ Free Fire</h2>
+      <input id="g-ff" placeholder="Free Fire ID">
+      <input id="s-ff" placeholder="Server ID">
+      <input id="r-ff" placeholder="ABA Ref Number">
+      <button onclick="subFF()">បញ្ជាទិញឥឡូវ</button>
+    </section>
+    <footer>
+      <p><a href="#" onclick="showPage('home')">← ត្រឡប់ទៅទំព័រដើម</a></p>
+    </footer>
+  </div>
+
+  <script>
+    function showPage(page){
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      document.getElementById(page).classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+    /* ML order */
+    let d,p;
+    function oML(di,pr){d=di;p=pr;document.getElementById('f-ml').style.display='block';window.scrollTo({top:document.getElementById('f-ml').offsetTop,behavior:'smooth'});}
+    function subML(){
+      const g=document.getElementById('g-ml').value.trim(),
+            s=document.getElementById('s-ml').value.trim(),
+            r=document.getElementById('r-ml').value.trim();
+      if(!g||!s||!r){alert('បំពេញព័ត៌មានឲ្យគ្រប់');return}
+      alert(`💎 Mobile Legends Order 💎\nGame ID: ${g}\nServer: ${s}\nPackage: ${d} diamonds\nPrice: $${p}\nABA Ref: ${r}\n\nបញ្ជាទិញទទួលបាន!`);
+      document.getElementById('f-ml').reset();document.getElementById('f-ml').style.display='none';
+    }
+    /* FF order */
+    function oFF(di,pr){d=di;p=pr;document.getElementById('f-ff').style.display='block';window.scrollTo({top:document.getElementById('f-ff').offsetTop,behavior:'smooth'});}
+    function subFF(){
+      const g=document.getElementById('g-ff').value.trim(),
+            s=document.getElementById('s-ff').value.trim(),
+            r=document.getElementById('r-ff').value.trim();
+      if(!g||!s||!r){alert('បំពេញព័ត៌មានឲ្យគ្រប់');return}
+      alert(`💎 Free Fire Order 💎\nID: ${g}\nServer: ${s}\nDiamond: ${d}\nPrice: $${p}\nABA Ref: ${r}\n\nបញ្ជាទិញទទួលបាន!`);
+      document.getElementById('f-ff').reset();document.getElementById('f-ff').style.display='none';
+    }
+  </script>
+</body>
+</html>
